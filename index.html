@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-Day Digital Product Launch | Live Curriculum</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #020617;
+            --surface: #0f172a;
+            --primary: #3b82f6;
+            --accent: #fbbf24;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg);
+            color: #f1f5f9;
+            overflow-x: hidden;
+        }
+        /* Focus Elements */
+        .highlight {
+            background: linear-gradient(120deg, rgba(59, 130, 246, 0.2) 0%, rgba(59, 130, 246, 0.2) 100%);
+            padding: 0 4px;
+            border-radius: 4px;
+        }
+        .marker-yellow {
+            background: rgba(251, 191, 36, 0.15);
+            color: #fbbf24;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+        .focus-underline {
+            position: relative;
+            display: inline-block;
+        }
+        .focus-underline::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 100%;
+            height: 3px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+        .glass-card {
+            background: var(--surface);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        /* Mobile Fluid Typography */
+        .h-hero { font-size: clamp(2.25rem, 8vw, 3.75rem); line-height: 1.1; }
+        .h-section { font-size: clamp(1.75rem, 5vw, 2.5rem); }
+        .container-pad { padding-left: 1.25rem; padding-right: 1.25rem; }
+    </style>
+</head>
+<body class="selection:bg-blue-500/30">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 bg-[#020617]/90 border-b border-white/5 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+            <div class="font-black text-xl tracking-tighter uppercase text-white">
+                SYSTEM<span class="text-blue-500">.</span>LAUNCH
+            </div>
+            <button onclick="applyNow()" class="text-[10px] font-bold bg-blue-600 hover:bg-blue-500 px-5 py-2.5 rounded-full uppercase tracking-widest transition-all">Apply Now</button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-32 pb-16 md:pt-48 md:pb-24 container-pad text-center">
+        <div class="max-w-4xl mx-auto">
+            <span class="inline-block text-blue-500 font-bold text-xs tracking-[0.2em] mb-4 uppercase">Direct Execution Curriculum</span>
+            <h1 class="h-hero font-extrabold mb-6">
+                3-Day <span class="focus-underline text-white">Digital Product</span> Launch 🚀
+            </h1>
+            <p class="text-base md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                If you are <span class="marker-yellow">serious</span> about building a <span class="highlight text-white font-semibold text-slate-100">structured system</span> — not just consuming information — this program is designed for you.
+            </p>
+            
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4 mb-12">
+                <div class="bg-red-500/10 text-red-400 px-5 py-3 rounded-xl border border-red-500/20 w-full md:w-auto font-bold text-sm">
+                    ❌ Not a motivational workshop
+                </div>
+                <div class="bg-blue-500/10 text-blue-400 px-5 py-3 rounded-xl border border-blue-500/20 w-full md:w-auto font-bold text-sm">
+                    ⚙️ A working framework
+                </div>
+            </div>
+
+            <button onclick="applyNow()" class="w-full md:w-auto bg-white text-black font-black px-12 py-5 rounded-2xl text-lg hover:scale-105 transition-all shadow-2xl shadow-blue-500/10">
+                GET INSTANT ACCESS
+            </button>
+            <p class="mt-4 text-[10px] text-slate-500 uppercase tracking-widest font-bold">Starts with a WhatsApp Message</p>
+        </div>
+    </section>
+
+    <!-- BEFORE VS AFTER (New Option 2) -->
+    <section class="py-20 bg-[#070b17] container-pad">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="h-section font-bold text-white mb-4">The Transformation Logic</h2>
+                <p class="text-slate-400">Why most people stay stuck in the "Random Action Loop."</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
+                <!-- Center Connector for Desktop -->
+                <div class="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-blue-600 rounded-full items-center justify-center z-10 border-4 border-[#070b17] text-white font-bold">VS</div>
+
+                <!-- Before -->
+                <div class="glass-card p-8 rounded-[2rem] border-red-500/10 bg-red-500/[0.02]">
+                    <div class="text-red-500 font-bold mb-6 flex items-center gap-2 italic">
+                        <span>⚠️</span> The Chaos (Random Action)
+                    </div>
+                    <ul class="space-y-5">
+                        <li class="flex items-center gap-3 text-slate-400 line-through decoration-slate-600">
+                            <span class="w-1.5 h-1.5 bg-red-500 rounded-full"></span> Random content posting without tracking
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-400 line-through decoration-slate-600">
+                            <span class="w-1.5 h-1.5 bg-red-500 rounded-full"></span> Guessing your niche and product price
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-400 line-through decoration-slate-600">
+                            <span class="w-1.5 h-1.5 bg-red-500 rounded-full"></span> Confusing DMs with zero sales scripts
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-400 line-through decoration-slate-600">
+                            <span class="w-1.5 h-1.5 bg-red-500 rounded-full"></span> Hoping for income, but no daily math
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- After -->
+                <div class="glass-card p-8 rounded-[2rem] border-blue-500/20 bg-blue-500/[0.03]">
+                    <div class="text-blue-500 font-bold mb-6 flex items-center gap-2 italic">
+                        <span>✅</span> The System (Structured Launch)
+                    </div>
+                    <ul class="space-y-5">
+                        <li class="flex items-center gap-3 text-white font-semibold">
+                            <span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> 30-Day automated lead engine
+                        </li>
+                        <li class="flex items-center gap-3 text-white font-semibold">
+                            <span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Defined <span class="marker-yellow text-xs px-2 py-0.5">High-Paying</span> problem identification
+                        </li>
+                        <li class="flex items-center gap-3 text-white font-semibold">
+                            <span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Structured ROI closing scripts
+                        </li>
+                        <li class="flex items-center gap-3 text-white font-semibold">
+                            <span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Practical 18K roadmap execution
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Build Section -->
+    <section class="py-24 container-pad">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="h-section font-bold mb-12 flex items-center gap-3">
+                📌 What You Will <span class="underline decoration-blue-500 decoration-4 underline-offset-8">Build:</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Day 1 -->
+                <div class="glass-card p-8 rounded-3xl border-l-4 border-l-blue-500">
+                    <span class="text-blue-500 font-black text-xs uppercase tracking-widest">Stage 01</span>
+                    <h3 class="text-xl font-bold mt-2 mb-6 text-white">Product Architecture</h3>
+                    <ul class="space-y-4 text-sm text-slate-400">
+                        <li class="flex gap-3"><span>●</span> Income-driven niche selection</li>
+                        <li class="flex gap-3"><span>●</span> One core paying problem</li>
+                        <li class="flex gap-3"><span>●</span> <span class="marker-yellow">Clear offer</span> structure</li>
+                    </ul>
+                </div>
+
+                <!-- Day 2 -->
+                <div class="glass-card p-8 rounded-3xl border-l-4 border-l-blue-500">
+                    <span class="text-blue-500 font-black text-xs uppercase tracking-widest">Stage 02</span>
+                    <h3 class="text-xl font-bold mt-2 mb-6 text-white">Sales & Conversion</h3>
+                    <ul class="space-y-4 text-sm text-slate-400">
+                        <li class="flex gap-3"><span>●</span> Structured sales framework</li>
+                        <li class="flex gap-3"><span>●</span> ROI explanation logic</li>
+                        <li class="flex gap-3"><span>●</span> Objection handling system</li>
+                    </ul>
+                </div>
+
+                <!-- Day 3 -->
+                <div class="glass-card p-8 rounded-3xl border-l-4 border-l-blue-500">
+                    <span class="text-blue-500 font-black text-xs uppercase tracking-widest">Stage 03</span>
+                    <h3 class="text-xl font-bold mt-2 mb-6 text-white">Lead Engine</h3>
+                    <ul class="space-y-4 text-sm text-slate-400">
+                        <li class="flex gap-3"><span>●</span> Daily lead execution model</li>
+                        <li class="flex gap-3"><span>●</span> Conversation tracking</li>
+                        <li class="flex gap-3"><span>●</span> Practical <span class="highlight text-white">18K roadmap</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="py-20 container-pad">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="p-10 rounded-[2.5rem] bg-white/[0.02] border border-white/5">
+                <h3 class="text-2xl font-bold text-white mb-8">👤 Who This Is For:</h3>
+                <div class="space-y-5 text-sm">
+                    <p class="flex gap-4"><span class="text-green-500 font-bold">✓</span> <span class="text-slate-300">Students seeking structured income direction</span></p>
+                    <p class="flex gap-4"><span class="text-green-500 font-bold">✓</span> <span class="text-slate-300">Professionals needing a system-based side income</span></p>
+                    <p class="flex gap-4"><span class="text-green-500 font-bold">✓</span> <span class="text-slate-300">Sellers struggling with clarity or conversions</span></p>
+                </div>
+            </div>
+            <div class="p-10 rounded-[2.5rem] bg-red-500/[0.02] border border-red-500/10">
+                <h3 class="text-2xl font-bold text-white mb-8">🚫 Not For:</h3>
+                <div class="space-y-5 text-sm text-slate-500">
+                    <p class="flex gap-4"><span>✕</span> Passive learners / Shortcut hunters</p>
+                    <p class="flex gap-4"><span>✕</span> Free mindset seekers</p>
+                    <p class="flex gap-4"><span>✕</span> Unwilling to put in 2-3 hours daily</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="apply" class="py-24 container-pad text-center">
+        <div class="max-w-3xl mx-auto glass-card p-10 md:p-16 rounded-[3rem] border-blue-500/30 relative">
+            <h2 class="h-section text-white font-black mb-8">The system is ready. <br><span class="marker-yellow">Are you?</span></h2>
+            
+            <div class="mb-10 p-6 bg-black/40 rounded-2xl border border-slate-800 text-sm">
+                <p class="text-white font-bold mb-2">⚠️ IMPORTANT</p>
+                <p class="text-slate-400 italic">"Income depends entirely on your application and consistency. We provide the map, you do the walking."</p>
+            </div>
+
+            <button onclick="applyNow()" class="w-full md:w-auto bg-blue-600 text-white font-black px-12 py-6 rounded-2xl text-xl hover:bg-blue-500 transition-all shadow-xl shadow-blue-600/40">
+                APPLY FOR ACCESS
+            </button>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-white/5 text-center text-[#475569] text-[10px] uppercase tracking-[0.3em] font-bold">
+        © 2026 System Launch | High-Authority Execution Model
+    </footer>
+
+    <script>
+        function applyNow() {
+            const phoneNumber = "91830613230"; 
+            const message = encodeURIComponent("Hi, I've seen the Before vs After transformation. I'm ready to move away from the Chaos and build the 3-Day Structured System. Please guide me with the application process.");
+            window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
+        }
+    </script>
+</body>
+</html>
+
