@@ -3,247 +3,330 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3-Day Digital Product Launch | Live Curriculum</title>
+    <title>Digital Product Masterclass | 1-on-1 Live Training</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --bg: #020617;
-            --surface: #0f172a;
-            --primary: #3b82f6;
-            --accent: #fbbf24;
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .gradient-text {
+            background: linear-gradient(90deg, #4F46E5, #9333EA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg);
-            color: #f1f5f9;
-            overflow-x: hidden;
+        .glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(229, 231, 235, 0.5);
         }
-        /* Focus Elements */
-        .highlight {
-            background: linear-gradient(120deg, rgba(59, 130, 246, 0.2) 0%, rgba(59, 130, 246, 0.2) 100%);
-            padding: 0 4px;
-            border-radius: 4px;
-        }
-        .marker-yellow {
-            background: rgba(251, 191, 36, 0.15);
-            color: #fbbf24;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-weight: 700;
-        }
-        .focus-underline {
+        .video-container {
             position: relative;
-            display: inline-block;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
         }
-        .focus-underline::after {
-            content: '';
+        .video-container iframe {
             position: absolute;
+            top: 0;
             left: 0;
-            bottom: -2px;
             width: 100%;
-            height: 3px;
-            background: var(--primary);
-            border-radius: 2px;
+            height: 100%;
         }
-        .glass-card {
-            background: var(--surface);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+        /* Mobile responsive adjustments */
+        @media (max-width: 640px) {
+            h1 { font-size: 2.5rem !important; line-height: 1.2 !important; }
+            .whatsapp-float {
+                bottom: 15px;
+                right: 15px;
+                padding: 12px;
+                font-size: 0.875rem;
+            }
         }
-        /* Mobile Fluid Typography */
-        .h-hero { font-size: clamp(2.25rem, 8vw, 3.75rem); line-height: 1.1; }
-        .h-section { font-size: clamp(1.75rem, 5vw, 2.5rem); }
-        .container-pad { padding-left: 1.25rem; padding-right: 1.25rem; }
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25d366;
+            color: white;
+            padding: 14px 20px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+            z-index: 1000;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.05) translateY(-5px);
+        }
     </style>
 </head>
-<body class="selection:bg-blue-500/30">
+<body class="bg-slate-50 text-slate-900 antialiased w-full">
 
-    <!-- Navbar -->
-    <nav class="fixed top-0 w-full z-50 bg-[#020617]/90 border-b border-white/5 backdrop-blur-md">
-        <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
-            <div class="font-black text-xl tracking-tighter uppercase text-white">
-                SYSTEM<span class="text-blue-500">.</span>LAUNCH
-            </div>
-            <button onclick="applyNow()" class="text-[10px] font-bold bg-blue-600 hover:bg-blue-500 px-5 py-2.5 rounded-full uppercase tracking-widest transition-all">Apply Now</button>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/918306132320" target="_blank" class="whatsapp-float">
+        <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        <span class="font-bold">Contact Support</span>
+    </a>
+
+    <!-- Hero Section -->
+    <header class="relative pt-12 pb-10 lg:pt-24 lg:pb-20 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 opacity-10">
+            <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-indigo-500 rounded-full blur-[120px]"></div>
+            <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-purple-500 rounded-full blur-[120px]"></div>
         </div>
-    </nav>
 
-    <!-- Hero -->
-    <section class="pt-32 pb-16 md:pt-48 md:pb-24 container-pad text-center">
-        <div class="max-w-4xl mx-auto">
-            <span class="inline-block text-blue-500 font-bold text-xs tracking-[0.2em] mb-4 uppercase">Direct Execution Curriculum</span>
-            <h1 class="h-hero font-extrabold mb-6">
-                3-Day <span class="focus-underline text-white">Digital Product</span> Launch 🚀
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="inline-block py-1 px-4 rounded-full bg-indigo-100 text-indigo-700 text-xs sm:text-sm font-semibold mb-6 tracking-wide uppercase">
+                Exclusive 1-on-1 Live Mentorship
+            </span>
+            <h1 class="text-3xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
+                Launch Your <span class="gradient-text">Profitable Digital Product</span> Business in Just 2 Days
             </h1>
-            <p class="text-base md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-                If you are <span class="marker-yellow">serious</span> about building a <span class="highlight text-white font-semibold text-slate-100">structured system</span> — not just consuming information — this program is designed for you.
+            <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed px-2">
+                Stop guessing and start building. A personalized, high-intensity roadmap from foundation to first sale—delivered live via Google Meet.
             </p>
             
-            <div class="flex flex-col md:flex-row items-center justify-center gap-4 mb-12">
-                <div class="bg-red-500/10 text-red-400 px-5 py-3 rounded-xl border border-red-500/20 w-full md:w-auto font-bold text-sm">
-                    ❌ Not a motivational workshop
-                </div>
-                <div class="bg-blue-500/10 text-blue-400 px-5 py-3 rounded-xl border border-blue-500/20 w-full md:w-auto font-bold text-sm">
-                    ⚙️ A working framework
-                </div>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16 px-4">
+                <a href="https://rzp.io/rzp/TlrC8kK" class="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all shadow-lg shadow-indigo-200 transform hover:scale-105 text-center">
+                    Secure Your 1-on-1 Spot
+                </a>
+                <a href="#curriculum" class="w-full sm:w-auto bg-white border border-slate-200 text-slate-700 px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 transition-all text-center">
+                    View Curriculum
+                </a>
             </div>
 
-            <button onclick="applyNow()" class="w-full md:w-auto bg-white text-black font-black px-12 py-5 rounded-2xl text-lg hover:scale-105 transition-all shadow-2xl shadow-blue-500/10">
-                GET INSTANT ACCESS
-            </button>
-            <p class="mt-4 text-[10px] text-slate-500 uppercase tracking-widest font-bold">Starts with a WhatsApp Message</p>
-        </div>
-    </section>
-
-    <!-- BEFORE VS AFTER (New Option 2) -->
-    <section class="py-20 bg-[#070b17] container-pad">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="h-section font-bold text-white mb-4">The Transformation Logic</h2>
-                <p class="text-slate-400">Why most people stay stuck in the "Random Action Loop."</p>
+            <!-- Business Explain Video with Added Border -->
+            <div class="max-w-4xl mx-auto px-4 mb-12">
+                <div class="shadow-2xl ring-4 ring-indigo-600/20 rounded-3xl overflow-hidden border-4 border-indigo-600">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/k_jDcuzIQVY" title="Business Explanation Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <p class="mt-6 text-sm font-medium text-slate-500 italic">Watch this video to understand the 2-day business model roadmap</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 relative">
-                <!-- Center Connector for Desktop -->
-                <div class="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-blue-600 rounded-full items-center justify-center z-10 border-4 border-[#070b17] text-white font-bold">VS</div>
-
-                <!-- Before -->
-                <div class="glass-card p-8 rounded-[2rem] border-red-500/10 bg-red-500/[0.02]">
-                    <div class="text-red-500 font-bold mb-6 flex items-center gap-2 italic">
-                        <span>⚠️</span> The Chaos (Random Action)
-                    </div>
-                    <ul class="space-y-5">
-                        <li class="flex items-center gap-3 text-slate-400 line-through decoration-slate-600">
-                            <span class="w-1.5 h-1.5 bg-red-500 rounded-full"></span> Random content posting without tracking
-                        </li>
-                        <li class="flex items-center gap-3 text-slate-400 line-through decoration-slate-600">
-                            <span class="w-1.5 h-1.5 bg-red-500 rounded-full"></span> Guessing your niche and product price
-                        </li>
-                        <li class="flex items-center gap-3 text-slate-400 line-through decoration-slate-600">
-                            <span class="w-1.5 h-1.5 bg-red-500 rounded-full"></span> Confusing DMs with zero sales scripts
-                        </li>
-                        <li class="flex items-center gap-3 text-slate-400 line-through decoration-slate-600">
-                            <span class="w-1.5 h-1.5 bg-red-500 rounded-full"></span> Hoping for income, but no daily math
-                        </li>
-                    </ul>
+            <div class="mt-8 flex flex-wrap justify-center gap-4 sm:gap-6 text-xs sm:text-sm font-medium text-slate-500 px-2">
+                <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                    Live on Google Meet
                 </div>
-
-                <!-- After -->
-                <div class="glass-card p-8 rounded-[2rem] border-blue-500/20 bg-blue-500/[0.03]">
-                    <div class="text-blue-500 font-bold mb-6 flex items-center gap-2 italic">
-                        <span>✅</span> The System (Structured Launch)
-                    </div>
-                    <ul class="space-y-5">
-                        <li class="flex items-center gap-3 text-white font-semibold">
-                            <span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> 30-Day automated lead engine
-                        </li>
-                        <li class="flex items-center gap-3 text-white font-semibold">
-                            <span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Defined <span class="marker-yellow text-xs px-2 py-0.5">High-Paying</span> problem identification
-                        </li>
-                        <li class="flex items-center gap-3 text-white font-semibold">
-                            <span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Structured ROI closing scripts
-                        </li>
-                        <li class="flex items-center gap-3 text-white font-semibold">
-                            <span class="w-1.5 h-1.5 bg-blue-500 rounded-full"></span> Practical 18K roadmap execution
-                        </li>
-                    </ul>
+                <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                    Exclusive Worksheets
+                </div>
+                <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                    AI Prompt Suite Included
                 </div>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- Build Section -->
-    <section class="py-24 container-pad">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="h-section font-bold mb-12 flex items-center gap-3">
-                📌 What You Will <span class="underline decoration-blue-500 decoration-4 underline-offset-8">Build:</span>
-            </h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <!-- The 2-Day Roadmap -->
+    <section id="curriculum" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">The 48-Hour Implementation Blueprint</h2>
+                <p class="text-slate-600">No fluff. No filler. Just pure execution.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
                 <!-- Day 1 -->
-                <div class="glass-card p-8 rounded-3xl border-l-4 border-l-blue-500">
-                    <span class="text-blue-500 font-black text-xs uppercase tracking-widest">Stage 01</span>
-                    <h3 class="text-xl font-bold mt-2 mb-6 text-white">Product Architecture</h3>
-                    <ul class="space-y-4 text-sm text-slate-400">
-                        <li class="flex gap-3"><span>●</span> Income-driven niche selection</li>
-                        <li class="flex gap-3"><span>●</span> One core paying problem</li>
-                        <li class="flex gap-3"><span>●</span> <span class="marker-yellow">Clear offer</span> structure</li>
+                <div class="relative p-6 sm:p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-indigo-200 transition-colors group">
+                    <div class="absolute -top-4 left-6 sm:left-8 bg-indigo-600 text-white px-4 py-1 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider">
+                        Day 01
+                    </div>
+                    <h3 class="text-2xl font-bold mt-4 mb-4">Digital Product Business foundation</h3>
+                    <p class="text-slate-600 mb-6 italic text-sm sm:text-base">Build a business that stands on solid ground.</p>
+                    <ul class="space-y-4 text-sm sm:text-base">
+                        <li class="flex gap-3 text-slate-700">
+                            <span class="flex-shrink-0 w-6 h-6 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold text-xs">1</span>
+                            <span>Niche Selection & Market Validation (Finding your "Gold Mine")</span>
+                        </li>
+                        <li class="flex gap-3 text-slate-700">
+                            <span class="flex-shrink-0 w-6 h-6 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold text-xs">2</span>
+                            <span>Defining Your Unique Value Proposition (UVP)</span>
+                        </li>
+                        <li class="flex gap-3 text-slate-700">
+                            <span class="flex-shrink-0 w-6 h-6 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center font-bold text-xs">3</span>
+                            <span>Tech Stack Setup (The "No-Code" way to launch fast)</span>
+                        </li>
+                        <li class="flex gap-3 text-slate-700 font-semibold text-indigo-600">
+                            <svg class="w-5 h-5 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                            Instant Bonus: Day 1 Strategy Worksheet
+                        </li>
                     </ul>
                 </div>
 
                 <!-- Day 2 -->
-                <div class="glass-card p-8 rounded-3xl border-l-4 border-l-blue-500">
-                    <span class="text-blue-500 font-black text-xs uppercase tracking-widest">Stage 02</span>
-                    <h3 class="text-xl font-bold mt-2 mb-6 text-white">Sales & Conversion</h3>
-                    <ul class="space-y-4 text-sm text-slate-400">
-                        <li class="flex gap-3"><span>●</span> Structured sales framework</li>
-                        <li class="flex gap-3"><span>●</span> ROI explanation logic</li>
-                        <li class="flex gap-3"><span>●</span> Objection handling system</li>
-                    </ul>
-                </div>
-
-                <!-- Day 3 -->
-                <div class="glass-card p-8 rounded-3xl border-l-4 border-l-blue-500">
-                    <span class="text-blue-500 font-black text-xs uppercase tracking-widest">Stage 03</span>
-                    <h3 class="text-xl font-bold mt-2 mb-6 text-white">Lead Engine</h3>
-                    <ul class="space-y-4 text-sm text-slate-400">
-                        <li class="flex gap-3"><span>●</span> Daily lead execution model</li>
-                        <li class="flex gap-3"><span>●</span> Conversation tracking</li>
-                        <li class="flex gap-3"><span>●</span> Practical <span class="highlight text-white">18K roadmap</span></li>
+                <div class="relative p-6 sm:p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:border-purple-200 transition-colors group">
+                    <div class="absolute -top-4 left-6 sm:left-8 bg-purple-600 text-white px-4 py-1 rounded-full text-xs sm:text-sm font-bold uppercase tracking-wider">
+                        Day 02
+                    </div>
+                    <h3 class="text-2xl font-bold mt-4 mb-4">Leads generation + Sales Closing</h3>
+                    <p class="text-slate-600 mb-6 italic text-sm sm:text-base">Turning attention into recurring revenue.</p>
+                    <ul class="space-y-4 text-sm sm:text-base">
+                        <li class="flex gap-3 text-slate-700">
+                            <span class="flex-shrink-0 w-6 h-6 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center font-bold text-xs">1</span>
+                            <span>High-Converting Lead Magnets that grow your list on autopilot</span>
+                        </li>
+                        <li class="flex gap-3 text-slate-700">
+                            <span class="flex-shrink-0 w-6 h-6 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center font-bold text-xs">2</span>
+                            <span>Social Media Selling & Direct Outreach Strategies</span>
+                        </li>
+                        <li class="flex gap-3 text-slate-700">
+                            <span class="flex-shrink-0 w-6 h-6 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center font-bold text-xs">3</span>
+                            <span>The "Soft-Close" Sales Script for High Ticket offers</span>
+                        </li>
+                        <li class="flex gap-3 text-slate-700 font-semibold text-purple-600">
+                            <svg class="w-5 h-5 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                            Instant Bonus: Day 2 Sales & Closing Worksheet
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Filters -->
-    <section class="py-20 container-pad">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="p-10 rounded-[2.5rem] bg-white/[0.02] border border-white/5">
-                <h3 class="text-2xl font-bold text-white mb-8">👤 Who This Is For:</h3>
-                <div class="space-y-5 text-sm">
-                    <p class="flex gap-4"><span class="text-green-500 font-bold">✓</span> <span class="text-slate-300">Students seeking structured income direction</span></p>
-                    <p class="flex gap-4"><span class="text-green-500 font-bold">✓</span> <span class="text-slate-300">Professionals needing a system-based side income</span></p>
-                    <p class="flex gap-4"><span class="text-green-500 font-bold">✓</span> <span class="text-slate-300">Sellers struggling with clarity or conversions</span></p>
+    <!-- AI Bonus Section -->
+    <section class="py-16 bg-slate-900 text-white overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Chatgpt Prompt for Problem research + Product Design + Clear Outcome</h2>
+                    <p class="text-slate-300 text-lg mb-8">
+                        You'll receive my proprietary "Digital Architect" prompt suite. This isn't just a basic chat; it's a complete framework for:
+                    </p>
+                    <ul class="space-y-4 mb-8 text-sm sm:text-base">
+                        <li class="flex items-center gap-3">
+                            <div class="w-5 h-5 rounded-full bg-indigo-500/20 border border-indigo-500 flex items-center justify-center">
+                                <svg class="w-3 h-3 text-indigo-400" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                            </div>
+                            Deep Problem Research & Pain Point Discovery
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-5 h-5 rounded-full bg-indigo-500/20 border border-indigo-500 flex items-center justify-center">
+                                <svg class="w-3 h-3 text-indigo-400" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                            </div>
+                            Rapid Product Structuring & Curriculum Design
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-5 h-5 rounded-full bg-indigo-500/20 border border-indigo-500 flex items-center justify-center">
+                                <svg class="w-3 h-3 text-indigo-400" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                            </div>
+                            Defining Clear Outcomes that make customers buy
+                        </li>
+                    </ul>
+                    <div class="p-4 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm overflow-hidden">
+                        <span class="text-sm font-bold text-indigo-400 block mb-1">PROMPT PREVIEW:</span>
+                        <p class="text-xs text-slate-400 font-mono break-all sm:break-normal">"Act as a market research analyst... analyze [Niche] pain points... design a 3-step solution with [Outcome]..."</p>
+                    </div>
                 </div>
-            </div>
-            <div class="p-10 rounded-[2.5rem] bg-red-500/[0.02] border border-red-500/10">
-                <h3 class="text-2xl font-bold text-white mb-8">🚫 Not For:</h3>
-                <div class="space-y-5 text-sm text-slate-500">
-                    <p class="flex gap-4"><span>✕</span> Passive learners / Shortcut hunters</p>
-                    <p class="flex gap-4"><span>✕</span> Free mindset seekers</p>
-                    <p class="flex gap-4"><span>✕</span> Unwilling to put in 2-3 hours daily</p>
+                <div class="lg:w-1/2 w-full relative">
+                    <div class="bg-indigo-600/20 absolute inset-0 blur-3xl rounded-full"></div>
+                    <div class="relative glass rounded-3xl p-6 sm:p-10 text-slate-800 shadow-2xl">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center">
+                                <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                            </div>
+                            <h4 class="text-xl font-bold">1 on 1 session</h4>
+                        </div>
+                        <p class="mb-6 leading-relaxed text-sm sm:text-base">Unlike crowded webinars, this is a <strong>private 1-on-1 experience</strong> on Google Meet. I will look at your specific niche, your specific product, and build it <em>with</em> you.</p>
+                        <ul class="text-sm space-y-2 text-slate-600 mb-8">
+                            <li>• Screen-sharing technical setup</li>
+                            <li>• Direct Q&A any time</li>
+                            <li>• Tailored advice for your industry</li>
+                        </ul>
+                        <div class="flex items-center justify-center py-4 bg-slate-50 rounded-2xl border border-dashed border-slate-300">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Google_Meet_icon_%282020%29.svg" class="w-8 mr-2" alt="Google Meet">
+                            <span class="font-bold text-sm sm:text-base">Live via Google Meet</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section id="apply" class="py-24 container-pad text-center">
-        <div class="max-w-3xl mx-auto glass-card p-10 md:p-16 rounded-[3rem] border-blue-500/30 relative">
-            <h2 class="h-section text-white font-black mb-8">The system is ready. <br><span class="marker-yellow">Are you?</span></h2>
+    <!-- Important Income Disclaimer -->
+    <section class="py-12 bg-white px-4">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-amber-50 border-l-4 border-amber-500 p-5 sm:p-6 rounded-r-2xl">
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <div class="flex-shrink-0">
+                        <svg class="h-6 w-6 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-amber-800 uppercase tracking-wide">Add note with hightligh Income depend your implementation</h3>
+                        <p class="mt-2 text-amber-700 leading-relaxed font-medium text-sm sm:text-base">
+                            The strategies shared in this training are proven frameworks. However, <span class="underline decoration-amber-500 decoration-2 font-extrabold">Income depend your implementation,</span> niche selection, and the effort you put into following the blueprint. No results are guaranteed without execution.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="booking" class="py-16 sm:py-20 bg-indigo-600 px-4">
+        <div class="max-w-4xl mx-auto text-center text-white">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6 px-2 leading-tight">Ready to Build Your Digital Legacy?</h2>
+            <p class="text-lg sm:text-xl text-indigo-100 mb-10 px-4">Limited spots available for 1 on 1 session this month. Secure your date now.</p>
             
-            <div class="mb-10 p-6 bg-black/40 rounded-2xl border border-slate-800 text-sm">
-                <p class="text-white font-bold mb-2">⚠️ IMPORTANT</p>
-                <p class="text-slate-400 italic">"Income depends entirely on your application and consistency. We provide the map, you do the walking."</p>
+            <div class="bg-white rounded-3xl p-6 sm:p-12 text-slate-900 shadow-2xl relative">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                    <div class="text-center md:text-left">
+                        <p class="text-slate-500 uppercase tracking-widest font-bold text-xs mb-2">Market Price <span class="line-through">₹ 1999</span></p>
+                        <div class="flex flex-col sm:flex-row items-center gap-2">
+                            <span class="text-sm font-bold text-indigo-600 uppercase">Book your Slot Just</span>
+                            <span class="text-4xl sm:text-5xl font-extrabold text-indigo-600">₹ 999</span>
+                        </div>
+                        <p class="text-slate-500 text-xs sm:text-sm mt-2">You receive Worksheet after Session Ending.</p>
+                    </div>
+                    <a href="https://rzp.io/rzp/TlrC8kK" class="w-full md:w-auto bg-indigo-600 text-white px-10 py-5 rounded-2xl text-center font-bold text-xl hover:bg-indigo-700 transition-all shadow-xl shadow-indigo-100 transform hover:scale-105 active:scale-95">
+                        Book Your First Session
+                    </a>
+                </div>
+                
+                <div class="mt-8 pt-8 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-semibold uppercase text-slate-400 tracking-tighter">
+                    <div class="flex items-center justify-center gap-2">
+                        <svg class="w-4 h-4 text-indigo-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                        2 Live Sessions
+                    </div>
+                    <div class="flex items-center justify-center gap-2">
+                        <svg class="w-4 h-4 text-indigo-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                        Prompt Library
+                    </div>
+                    <div class="flex items-center justify-center gap-2">
+                        <svg class="w-4 h-4 text-indigo-500" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                        Worksheets
+                    </div>
+                </div>
             </div>
-
-            <button onclick="applyNow()" class="w-full md:w-auto bg-blue-600 text-white font-black px-12 py-6 rounded-2xl text-xl hover:bg-blue-500 transition-all shadow-xl shadow-blue-600/40">
-                APPLY FOR ACCESS
-            </button>
         </div>
     </section>
 
-    <footer class="py-12 border-t border-white/5 text-center text-[#475569] text-[10px] uppercase tracking-[0.3em] font-bold">
-        © 2026 System Launch | High-Authority Execution Model
+    <footer class="py-12 bg-white border-t border-slate-100 text-center px-4">
+        <p class="text-slate-400 text-xs sm:text-sm uppercase font-bold tracking-widest mb-4">Digital Product business foundation</p>
+        <p class="text-slate-400 text-xs">&copy; 2026 Digital Product Blueprint. All rights reserved.</p>
     </footer>
 
     <script>
-        function applyNow() {
-            const phoneNumber = "918306132320"; 
-            const message = encodeURIComponent("Hi, I've seen the Before vs After transformation. I'm ready to move away from the Chaos and build the 3-Day Structured System. Please guide me with the application process.");
-            window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
-        }
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
     </script>
 </body>
 </html>
